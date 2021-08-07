@@ -1,0 +1,205 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --active-state: hsl(245deg 83% 68%);
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./images/pattern-background-desktop.svg) no-repeat;
+    background-color: var(--pale-blue);
+    background-position: top;
+    background-size: contain;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    /* max-width: 90rem; */
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    width: 28.125rem;
+    padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .card__head {
+    margin: -1.875rem -1.875rem;
+}
+
+.card .card__head>img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card .card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.875rem;
+    padding: 1.25rem;
+    color: var(--desaturated-blue);
+}
+
+.card .card__body>h1 {
+    font-weight: 900;
+    color: var(--dark-blue);
+    padding: 1.5625rem 0;
+}
+
+.card .card__body>p {
+    text-align: center;
+    line-height: 1.5625rem;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5625rem;
+    background: var(--very-pale-blue);
+    width: 100%;
+    align-items: center;
+    border-radius: 20px;
+    line-height: 1.5625rem;
+    margin: 1.25rem 0 1.875rem 0;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bright-blue);
+    padding: .9375rem;
+    color: #fff;
+    font-weight: 600;
+    border-radius: .625rem;
+    box-shadow: 0px 17px 35px 6px rgba(24, 24, 174, 0.25);
+    -webkit-box-shadow: 0px 17px 35px 6px rgba(24, 24, 174, 0.25);
+    -moz-box-shadow: 0px 17px 35px 6px rgba(24, 24, 174, 0.25);
+    margin-bottom: 1.875rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background: var(--active-state);
+}
+
+.cancel {
+    margin-top: .625rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+.details {
+    line-height: 1.5625rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 1.25rem;
+}
+
+.details .details__plan__type {
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.link {
+    font-weight: 600;
+    color: var(--bright-blue);
+    transition: all 0.5s ease;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.link>a:hover {
+    text-decoration: none;
+    color: var(--active-state);
+}
+
+@media (max-width: 36em) {
+    .card {
+        background: white;
+        border-radius: 15px;
+        max-width: 23.4375rem;
+        padding: 1.875rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .card .card__head>img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 100%;
+        object-fit: contain;
+    }
+    .card .card__body {
+        padding: 0;
+    }
+    .pricing {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 23.4375rem) {
+    .card {
+        background: white;
+        border-radius: 15px;
+        max-width: 20rem;
+        padding: 30px 20px;
+    }
+    .card .card__head>img {
+        width: 100%;
+        object-fit: contain;
+    }
+    .card .card__body {
+        padding: 0;
+    }
+    .pricing {
+        padding: 1.5625rem 1.25rem;
+    }
+}
+
+@media (max-width: 20rem) {
+    .card {
+        max-width: 18.75rem;
+    }
+    .pricing {
+        padding: 1.5625rem .625rem;
+    }
+}
+
+
+/* @media (max-width: 23.4375em) {
+    
+} */
