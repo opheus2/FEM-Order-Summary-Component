@@ -42,6 +42,9 @@ body {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    box-shadow: 1px 32px 49px 0px rgba(24, 24, 174, 0.24);
+    -webkit-box-shadow: 1px 32px 49px 0px rgba(24, 24, 174, 0.24);
+    -moz-box-shadow: 1px 32px 49px 0px rgba(24, 24, 174, 0.24);
 }
 
 .card .card__head {
